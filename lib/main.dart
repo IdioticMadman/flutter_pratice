@@ -3,6 +3,7 @@ import 'package:flutter_pratice/base/counter.dart';
 import 'package:flutter_pratice/base/state_control.dart';
 import 'package:flutter_pratice/base/text/text_demo.dart';
 import 'package:flutter_pratice/base/button/button_demo.dart';
+import 'package:flutter_pratice/base/image/image_demo.dart';
 
 void main() => runApp(MyApp());
 
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
         "/state_self": (context) => TapBox(),
         "/text_demo": (context) => TextDemo(),
         "/button_demo": (context) => ButtonDemo(),
+        "/image_demo": (context) => ImageDemo(),
       },
       home: Scaffold(
         appBar: AppBar(
@@ -63,6 +65,12 @@ class MyHomeWidget extends StatelessWidget {
             child: Text("button_demo"),
             onPressed: () {
               Navigator.pushNamed(context, '/button_demo');
+            },
+          ),
+          RaisedButton(
+            child: Text("image_demo"),
+            onPressed: () {
+              Navigator.pushNamed(context, '/image_demo');
             },
           )
         ],
