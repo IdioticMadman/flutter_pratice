@@ -6,6 +6,9 @@ import 'package:flutter_pratice/base/text/text_input_demo.dart';
 import 'package:flutter_pratice/base/button/button_demo.dart';
 import 'package:flutter_pratice/base/image/image_demo.dart';
 import 'package:flutter_pratice/base/check/swich_check_demo.dart';
+import 'package:flutter_pratice/layout/container.dart';
+import 'scroll/single_scroll.dart';
+import 'scroll/listview.dart';
 
 void main() => runApp(MyApp());
 
@@ -28,6 +31,10 @@ class MyApp extends StatelessWidget {
         "/image_demo": (context) => ImageDemo(),
         "/switch_demo": (context) => SwitchAndCheckBoxDemo(),
         "/text_input_demo": (context) => FormDemo(),
+        "/container_demo": (context) => ContainerDemo(),
+        "/scaffold_demo": (context) => ScaffoldDemo(),
+        "/scroll_demo": (context) => SingleChildScrollViewDemo(),
+        "/listview_demo": (context) => ListViewDemo(),
       },
       home: Scaffold(
         appBar: AppBar(
@@ -88,10 +95,33 @@ class MyHomeWidget extends StatelessWidget {
             onPressed: () {
               Navigator.pushNamed(context, '/switch_demo');
             },
-          )
+          ),
+          RaisedButton(
+            child: Text("container_demo"),
+            onPressed: () {
+              Navigator.pushNamed(context, '/container_demo');
+            },
+          ),
+          RaisedButton(
+            child: Text("scaffold_demo"),
+            onPressed: () {
+              Navigator.pushNamed(context, '/scaffold_demo');
+            },
+          ),
+          RaisedButton(
+            child: Text("scroll_demo"),
+            onPressed: () {
+              Navigator.pushNamed(context, '/scroll_demo');
+            },
+          ),
+          RaisedButton(
+            child: Text("listview_demo"),
+            onPressed: () {
+              Navigator.pushNamed(context, '/listview_demo');
+            },
+          ),
         ],
       ),
     );
   }
 }
-
